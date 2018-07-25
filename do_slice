@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+
+#定义一个函数，用来去除字符串首尾的空格
+def trim(s):
+    '''首先判断该字符串是否为空，如果为空，就返回该字符串，
+    如果不为空的话，就判断字符串首尾字符是否为空，
+    如果为空，就使用递归再次调用该函数trim(),否则就返回该函数'''
+    if len(s) == 0:
+        return s
+    elif s[0] == ' ':
+        return (trim(s[1:]))
+    elif s[-1] == ' ':
+        return (trim(s[:-1]))
+    return s
+
+
+#调用该函数
+print(trim('hello  '))
+print(trim('  hello'))
+print(trim('  hello  '))
+print(trim(''))
+print(trim('    '))
