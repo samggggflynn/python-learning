@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-def product(x, *y):
+def product(x, *args):
     sum = 1
-    for n in y:
+    for n in args:
         sum =  sum * n
     return x * sum
 # 测试
